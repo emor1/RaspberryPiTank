@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function sendON(){
+        //     var form = document.createElement("form");
+        //     form.setAttribute("action","/on");
+        //     form.setAttribute( "method", "post" );  // POSTリクエスト送信
+        //     form.setAttribute( "target", "hiddeniframe" );  // 画面遷移しないための仕掛け
+        //     form.style.display = "none";  // 画面表示なし
+        //     document.body.appendChild( form );  // bodyの子要素として追加
+        //     form.submit();
+        // }
+        // function sendOff(){
+        //     var form = document.createElement("form");
+        //     form.setAttribute("action","/off");
+        //     form.setAttribute( "method", "post" );  // POSTリクエスト送信
+        //     form.setAttribute( "target", "hiddeniframe" );  // 画面遷移しないための仕掛け
+        //     form.style.display = "none";  // 画面表示なし
+        //     document.body.appendChild( form );  // bodyの子要素として追加
+        //     form.submit();
+
+        // }
+    </script>
+</head>
+<body>
+    <img src="{{ url_for('video_feed') }}" width="100%">
+    <!-- <a href="#" onclick="sendON()">LED ON</a>
+    <a href="#" onclick="sendOff()">LED OFF</a> -->
+    <form action="/on" method="POST">
+        <button name="name" value="forward">forward</button>
+        <button name="name" value="backward">backward</button>
+        <button name="name" value="left">left</button>
+        <button name="name" value="right">right</button>
+        <button name="name" value="stop">stop</button>
+    </form>
+    <iframe hidden name="hiddeniframe"></iframe>
+</body>
+</html>
