@@ -6,7 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function onClicked(way){
+        let button1 = document.getElementById('fw');
+        let button2 = document.getElementById('lef');
+        let button3 = document.getElementById('rig');
+        let button4 = document.getElementById('back');
+
+        button1.addEventListener('mousedown', tankCmd("forward"));
+        botton1.addEventListener('mouseup', tankCmd("stop"));
+
+        button2.addEventListener('mousedown', tankCmd("left"));
+        botton2.addEventListener('mouseup', tankCmd("stop"));
+
+        button3.addEventListener('mousedown', tankCmd("right"));
+        botton3.addEventListener('mouseup', tankCmd("stop"));
+
+        button4.addEventListener('mousedown', tankCmd("backward"));
+        botton4.addEventListener('mouseup', tankCmd("stop"));
+
+        function tankCmd(way){
             let form=document.createElement("form");
             form.setAttribute("action","/on");
             form.setAttribute("method","post");
@@ -29,20 +46,11 @@
     <div class="displayArea">
         <img src="{{ url_for('video_feed') }}" width="640" height="480">
     </div>
-    <!-- <a href="#" onclick="sendON()">LED ON</a>
-    <a href="#" onclick="sendOff()">LED OFF</a> -->
-    <!-- <form action="/on" method="POST"> -->
-        <!-- <button name="name" value="forward">forward</button>
-        <button name="name" value="backward">backward</button>
-        <button name="name" value="left">left</button>
-        <button name="name" value="right">right</button>
-        <button name="name" value="stop">stop</button> -->
-    <!-- </form> -->
-            <button name="name" onclick="onClicked('forward')">forward</button>
-            <button name="name" onclick="onClicked('backward')">backward</button>
-            <button name="name" onclick="onClicked('left')">left</button>
-            <button name="name" onclick="onClicked('right')">right</button>
-            <button name="name" onclick="onClicked('stop')">stop</button>
+            <button id="fw" name="name" >forward</button>
+            <button id="lef" name="name" >backward</button>
+            <button id="rig" name="name" >left</button>
+            <button id="back" name="name">right</button>
+            <!-- <button id="btn" name="name" onclick="onClicked('stop')">stop</button> -->
     <iframe hidden name="hiddeniframe"></iframe>
 </body>
 </html>
