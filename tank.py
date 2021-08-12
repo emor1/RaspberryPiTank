@@ -59,15 +59,19 @@ def tankStop(value=255):
 def Tank():
     if request.method == "POST":
         if "forward"==request.form['name']:
+            print("-"*20)
             tankForward()
             print("Forward")
         elif "backward"==request.form['name']:
+            print("-"*20)
             print("Backward")
             tankBackward()
         elif "left" == request.form['name']:
+            print("-"*20)
             tankLeft()
             print("left")
         elif "right"==request.form['name']:
+            print("-"*20)
             tankRight()
             print("right")
         else:
