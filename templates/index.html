@@ -5,42 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        let button1 = document.getElementById('fw');
-        let button2 = document.getElementById('lef');
-        let button3 = document.getElementById('rig');
-        let button4 = document.getElementById('back');
-
-        button1.addEventListener('mousedown', tankCmd("forward"));
-        botton1.addEventListener('mouseup', tankCmd("stop"));
-
-        button2.addEventListener('mousedown', tankCmd("left"));
-        botton2.addEventListener('mouseup', tankCmd("stop"));
-
-        button3.addEventListener('mousedown', tankCmd("right"));
-        botton3.addEventListener('mouseup', tankCmd("stop"));
-
-        button4.addEventListener('mousedown', tankCmd("backward"));
-        botton4.addEventListener('mouseup', tankCmd("stop"));
-
-        function tankCmd(way){
-            let form=document.createElement("form");
-            form.setAttribute("action","/on");
-            form.setAttribute("method","post");
-            form.setAttribute("target","hiddeniframe");
-            form.style.display="none";
-            document.body.appendChild(form);
-
-            let input;
-            input=document.createElement("input");
-            input.setAttribute("type","hidden");
-            input.setAttribute("name","name");
-            input.setAttribute("value",way);
-
-            form.appendChild(input);
-            form.submit();
-        }
-    </script>
 </head>
 <body>
     <div class="displayArea">
@@ -52,5 +16,41 @@
             <button id="back" name="name">right</button>
             <!-- <button id="btn" name="name" onclick="onClicked('stop')">stop</button> -->
     <iframe hidden name="hiddeniframe"></iframe>
+        <script>
+            let button1 = document.getElementById('fw');
+            let button2 = document.getElementById('lef');
+            let button3 = document.getElementById('rig');
+            let button4 = document.getElementById('back');
+
+            button1.addEventListener('mousedown', tankCmd("forward"));
+            botton1.addEventListener('mouseup', tankCmd("stop"));
+
+            button2.addEventListener('mousedown', tankCmd("left"));
+            botton2.addEventListener('mouseup', tankCmd("stop"));
+
+            button3.addEventListener('mousedown', tankCmd("right"));
+            botton3.addEventListener('mouseup', tankCmd("stop"));
+
+            button4.addEventListener('mousedown', tankCmd("backward"));
+            botton4.addEventListener('mouseup', tankCmd("stop"));
+
+            function tankCmd(way) {
+                let form = document.createElement("form");
+                form.setAttribute("action", "/on");
+                form.setAttribute("method", "post");
+                form.setAttribute("target", "hiddeniframe");
+                form.style.display = "none";
+                document.body.appendChild(form);
+
+                let input;
+                input = document.createElement("input");
+                input.setAttribute("type", "hidden");
+                input.setAttribute("name", "name");
+                input.setAttribute("value", way);
+
+                form.appendChild(input);
+                form.submit();
+            }
+        </script>
 </body>
 </html>
