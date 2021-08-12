@@ -11,10 +11,10 @@
     <div class="displayArea">
         <img src="{{ url_for('video_feed') }}" width="640" height="480">
     </div>
-            <li id="fw" name="name" onmousedown="tankCmd('forward')" onmouseup="tankCmd('stop')">forward</li>
-            <li id="lef" name="name" onmousedown="tankCmd('backward')" onmouseup="tankCmd('stop')">backward</li>
-            <li id="rig" name="name" onmousedown="tankCmd('left')" onmouseup="tankCmd('stop')">left</li>
-            <li id="back" name="name"onmousedown="tankCmd('right')" onmouseup="tankCmd('stop')">right</li>
+            <li id="fw" name="name" onmousedown="tankCmd('forward')" onmouseup="tankCmd('stop')"></li>
+            <li id="lef" name="name" onmousedown="tankCmd('backward')" onmouseup="tankCmd('stop')"></li>
+            <li id="rig" name="name" onmousedown="tankCmd('left')" onmouseup="tankCmd('stop')"></li>
+            <li id="back" name="name"onmousedown="tankCmd('right')" onmouseup="tankCmd('stop')"></li>
             <!-- <li id="btn" name="name" onclick="onClicked('stop')">stop</li> -->
         <script>
             function tankCmd(way) {
