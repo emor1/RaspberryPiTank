@@ -11,11 +11,11 @@
     <div class="displayArea">
         <img src="{{ url_for('video_feed') }}" width="640" height="480">
     </div>
-            <button id="fw" name="name" onmousedown="tankCmd('forward')" onmouseup="tankCmd('stop')">forward</button>
-            <button id="lef" name="name" onmousedown="tankCmd('backward')" onmouseup="tankCmd('stop')">backward</button>
-            <button id="rig" name="name" onmousedown="tankCmd('left')" onmouseup="tankCmd('stop')">left</button>
-            <button id="back" name="name"onmousedown="tankCmd('right')" onmouseup="tankCmd('stop')">right</button>
-            <!-- <button id="btn" name="name" onclick="onClicked('stop')">stop</button> -->
+            <li id="fw" name="name" onmousedown="tankCmd('forward')" onmouseup="tankCmd('stop')">forward</li>
+            <li id="lef" name="name" onmousedown="tankCmd('backward')" onmouseup="tankCmd('stop')">backward</li>
+            <li id="rig" name="name" onmousedown="tankCmd('left')" onmouseup="tankCmd('stop')">left</li>
+            <li id="back" name="name"onmousedown="tankCmd('right')" onmouseup="tankCmd('stop')">right</li>
+            <!-- <li id="btn" name="name" onclick="onClicked('stop')">stop</li> -->
         <script>
             function tankCmd(way) {
                 let form = document.createElement("form");
