@@ -31,11 +31,11 @@
     <div class="displayArea">
         <img src="{{ url_for('video_feed') }}" width="640" height="480">
     </div>
-    <div>
-            <li id="fw" name="name" onmousedown="tankCmd('forward')" onmouseup="tankCmd('stop')"></li>
-            <li id="lef" name="name" onmousedown="tankCmd('backward')" onmouseup="tankCmd('stop')"></li>
-            <li id="rig" name="name" onmousedown="tankCmd('left')" onmouseup="tankCmd('stop')"></li>
-            <li id="back" name="name"onmousedown="tankCmd('right')" onmouseup="tankCmd('stop')"></li>
+    <div id="button">
+            <li id="fw" name="name" onmousedown="tankCmd('forward')" onmouseup="tankCmd('stop')">F</li>
+            <li id="lef" name="name" onmousedown="tankCmd('backward')" onmouseup="tankCmd('stop')">B</li>
+            <li id="rig" name="name" onmousedown="tankCmd('left')" onmouseup="tankCmd('stop')">L</li>
+            <li id="back" name="name"onmousedown="tankCmd('right')" onmouseup="tankCmd('stop')">R</li>
             <!-- <li id="btn" name="name" onclick="onClicked('stop')">stop</li> -->
     </div>
     <iframe hidden name="hiddeniframe"></iframe>

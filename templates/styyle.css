@@ -5,6 +5,6 @@ html,li,div,body {
 user-select: none;
 }
 
-div{
+#button{
     color: aqua;
 }
