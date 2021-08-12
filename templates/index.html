@@ -10,29 +10,12 @@
     <div class="displayArea">
         <img src="{{ url_for('video_feed') }}" width="640" height="480">
     </div>
-            <button id="fw" name="name" onmousedown="tankCmd('forward')">forward</button>
-            <button id="lef" name="name" onmousedown="tankCmd('backward')">backward</button>
-            <button id="rig" name="name" onmousedown="tankCmd('left')">left</button>
-            <button id="back" name="name"onmousedown="tankCmd('right')">right</button>
+            <button id="fw" name="name" onmousedown="tankCmd('forward')" onmouseup="tankCmd('stop')">forward</button>
+            <button id="lef" name="name" onmousedown="tankCmd('backward')" onmouseup="tankCmd('stop')">backward</button>
+            <button id="rig" name="name" onmousedown="tankCmd('left')" onmouseup="tankCmd('stop')">left</button>
+            <button id="back" name="name"onmousedown="tankCmd('right')" onmouseup="tankCmd('stop')">right</button>
             <!-- <button id="btn" name="name" onclick="onClicked('stop')">stop</button> -->
         <script>
-            // let button1 = document.getElementById('fw');
-            // let button2 = document.getElementById('lef');
-            // let button3 = document.getElementById('rig');
-            // let button4 = document.getElementById('back');
-
-            // button1.addEventListener('mousedown', tankCmd("forward"));
-            // button1.addEventListener('mouseup', tankCmd("stop"));
-
-            // button2.addEventListener('mousedown', tankCmd("left"));
-            // button2.addEventListener('mouseup', tankCmd("stop"));
-
-            // button3.addEventListener('mousedown', tankCmd("right"));
-            // button3.addEventListener('mouseup', tankCmd("stop"));
-
-            // button4.addEventListener('mousedown', tankCmd("backward"));
-            // button4.addEventListener('mouseup', tankCmd("stop"));
-
             function tankCmd(way) {
                 let form = document.createElement("form");
                 form.setAttribute("action", "/on");
