@@ -1,4 +1,8 @@
 body {
-    /* -webkit-touch-callout:none; リンク長押しのポップアップを無効化 */
-    -webkit-user-select:none; /*テキスト長押しの選択ボックスを無効化*/
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -moz-touch-callout:none;
+    -moz-user-select:none;
+    touch-callout:none;
+    user-select:none;
 }
