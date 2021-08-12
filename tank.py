@@ -60,13 +60,16 @@ def Tank():
     if request.method == "POST":
         if "forward"==request.form['name']:
             tankForward()
-            print("On")
+            print("Forward")
         elif "backward"==request.form['name']:
+            print("Backward")
             tankBackward()
         elif "left" == request.form['name']:
             tankLeft()
+            print("left")
         elif "right"==request.form['name']:
             tankRight()
+            print("right")
         else:
             tankStop()
     return render_template('index.html')
