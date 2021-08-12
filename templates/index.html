@@ -15,7 +15,6 @@
             <button id="rig" name="name" >left</button>
             <button id="back" name="name">right</button>
             <!-- <button id="btn" name="name" onclick="onClicked('stop')">stop</button> -->
-    <iframe hidden name="hiddeniframe"></iframe>
         <script>
             let button1 = document.getElementById('fw');
             let button2 = document.getElementById('lef');
@@ -23,16 +22,16 @@
             let button4 = document.getElementById('back');
 
             button1.addEventListener('mousedown', tankCmd("forward"));
-            botton1.addEventListener('mouseup', tankCmd("stop"));
+            button1.addEventListener('mouseup', tankCmd("stop"));
 
             button2.addEventListener('mousedown', tankCmd("left"));
-            botton2.addEventListener('mouseup', tankCmd("stop"));
+            button2.addEventListener('mouseup', tankCmd("stop"));
 
             button3.addEventListener('mousedown', tankCmd("right"));
-            botton3.addEventListener('mouseup', tankCmd("stop"));
+            button3.addEventListener('mouseup', tankCmd("stop"));
 
             button4.addEventListener('mousedown', tankCmd("backward"));
-            botton4.addEventListener('mouseup', tankCmd("stop"));
+            button4.addEventListener('mouseup', tankCmd("stop"));
 
             function tankCmd(way) {
                 let form = document.createElement("form");
@@ -52,5 +51,6 @@
                 form.submit();
             }
         </script>
+    <iframe hidden name="hiddeniframe"></iframe>
 </body>
 </html>
