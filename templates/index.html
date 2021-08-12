@@ -6,38 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        // function sendON(){
-        //     var form = document.createElement("form");
-        //     form.setAttribute("action","/on");
-        //     form.setAttribute( "method", "post" );  // POSTリクエスト送信
-        //     form.setAttribute( "target", "hiddeniframe" );  // 画面遷移しないための仕掛け
-        //     form.style.display = "none";  // 画面表示なし
-        //     document.body.appendChild( form );  // bodyの子要素として追加
-        //     form.submit();
-        // }
-        // function sendOff(){
-        //     var form = document.createElement("form");
-        //     form.setAttribute("action","/off");
-        //     form.setAttribute( "method", "post" );  // POSTリクエスト送信
-        //     form.setAttribute( "target", "hiddeniframe" );  // 画面遷移しないための仕掛け
-        //     form.style.display = "none";  // 画面表示なし
-        //     document.body.appendChild( form );  // bodyの子要素として追加
-        //     form.submit();
+        function onClicked(way){
+            let form=document.createElement("form");
+            form.setAttribute("action","/on");
+            form.setAttribute("method","post");
+            form.setAttribute("target","hiddeniframe");
+            form.style.display="none";
+            document.body.appendChild(form);
 
-        // }
+            let input;
+            input=document.createElement("input");
+            input.setAttribute("type","hidden");
+            input.setAttribute("name","name");
+            input.setAttribute("value",way);
+
+            form.appendChild(input);
+            form.submit();
+        }
     </script>
 </head>
 <body>
-    <img src="{{ url_for('video_feed') }}" width="100%">
+    <div class="displayArea">
+        <img src="{{ url_for('video_feed') }}" width="640" height="480">
+    </div>
     <!-- <a href="#" onclick="sendON()">LED ON</a>
     <a href="#" onclick="sendOff()">LED OFF</a> -->
-    <form action="/on" method="POST">
-        <button name="name" value="forward">forward</button>
+    <!-- <form action="/on" method="POST"> -->
+        <!-- <button name="name" value="forward">forward</button>
         <button name="name" value="backward">backward</button>
         <button name="name" value="left">left</button>
         <button name="name" value="right">right</button>
-        <button name="name" value="stop">stop</button>
-    </form>
+        <button name="name" value="stop">stop</button> -->
+    <!-- </form> -->
+            <button name="name" onclick="onClicked('forward')">forward</button>
+            <button name="name" onclick="onClicked('backward')">backward</button>
+            <button name="name" onclick="onClicked('left')">left</button>
+            <button name="name" onclick="onClicked('right')">right</button>
+            <button name="name" onclick="onClicked('stop')">stop</button>
     <iframe hidden name="hiddeniframe"></iframe>
 </body>
 </html>
