@@ -6,16 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
-</head>
-<body oncopy='return false;'>
-    <div class="displayArea">
-        <img src="{{ url_for('video_feed') }}" width="640" height="480">
-    </div>
-            <li id="fw" name="name" onmousedown="tankCmd('forward')" onmouseup="tankCmd('stop')"></li>
-            <li id="lef" name="name" onmousedown="tankCmd('backward')" onmouseup="tankCmd('stop')"></li>
-            <li id="rig" name="name" onmousedown="tankCmd('left')" onmouseup="tankCmd('stop')"></li>
-            <li id="back" name="name"onmousedown="tankCmd('right')" onmouseup="tankCmd('stop')"></li>
-            <!-- <li id="btn" name="name" onclick="onClicked('stop')">stop</li> -->
         <script>
             function tankCmd(way) {
                 let form = document.createElement("form");
@@ -35,7 +25,19 @@
                 form.appendChild(input);
                 form.submit();
             }
-        </script>
+        </script>    
+</head>
+<body oncopy='return false;'>
+    <div class="displayArea">
+        <img src="{{ url_for('video_feed') }}" width="640" height="480">
+    </div>
+    <div>
+            <li id="fw" name="name" onmousedown="tankCmd('forward')" onmouseup="tankCmd('stop')"></li>
+            <li id="lef" name="name" onmousedown="tankCmd('backward')" onmouseup="tankCmd('stop')"></li>
+            <li id="rig" name="name" onmousedown="tankCmd('left')" onmouseup="tankCmd('stop')"></li>
+            <li id="back" name="name"onmousedown="tankCmd('right')" onmouseup="tankCmd('stop')"></li>
+            <!-- <li id="btn" name="name" onclick="onClicked('stop')">stop</li> -->
+    </div>
     <iframe hidden name="hiddeniframe"></iframe>
 </body>
 </html>
