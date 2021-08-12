@@ -8,12 +8,20 @@ user-select: none;
 #button{
     color: rgb(0, 0, 0);
 }
-/* .displayArea{
-    width: 640px;
-    height: 420px;
-} */
-/* @media screen and (max-width: 767px) {
-    .displayArea{
-        width:320px;
-    }
-} */
+.container {
+    width: 320px;
+    height: 213px;
+    background: black;
+}
+
+.view {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 50%;
+}
+
+img {
+    mix-blend-mode: darken;
+}

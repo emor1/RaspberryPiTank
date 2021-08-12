@@ -8,38 +8,22 @@
     <!-- <link rel="stylesheet" href="..\static\css\style.css"> -->
 
     <title>Document</title>
-        <script>
-            function tankCmd(way) {
-                let form = document.createElement("form");
-                form.setAttribute("action", "/on");
-                form.setAttribute("method", "post");
-                form.setAttribute("target", "hiddeniframe");
-                form.style.display = "none";
-                console.log(way);
-                document.body.appendChild(form);
-
-                let input;
-                input = document.createElement("input");
-                input.setAttribute("type", "hidden");
-                input.setAttribute("name", "name");
-                input.setAttribute("value", way);
-
-                form.appendChild(input);
-                form.submit();
-            }
-        </script>    
 </head>
 <body oncopy='return false;'>
     <div class="displayArea">
         <img src="{{ url_for('video_feed') }}" width="640px" height="420px">
     </div>
-    <div id="button">
+    <!-- <div id="button">
             <button id="fw" name="name" onmousedown="tankCmd('forward')" onmouseup="tankCmd('stop')">F</button>
             <button id="lef" name="name" onmousedown="tankCmd('backward')" onmouseup="tankCmd('stop')">B</button>
             <button id="rig" name="name" onmousedown="tankCmd('left')" onmouseup="tankCmd('stop')">L</button>
             <button id="back" name="name"onmousedown="tankCmd('right')" onmouseup="tankCmd('stop')">R</button>
-            <!-- <li id="btn" name="name" onclick="onClicked('stop')">stop</li> -->
+    </div> -->
+    <div class="container">
+        <div class="view" hidden></div>
+        <img src="https://interactive-examples.mdn.mozilla.net/media/examples/gecko-320-213.jpg">
     </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     <iframe hidden name="hiddeniframe"></iframe>
 </body>
 </html>
