@@ -6,14 +6,14 @@ user-select: none;
 }
 
 #button{
-    color: aqua;
+    color: rgb(0, 0, 0);
 }
 .displayArea{
     width: 640px;
     height: 420px;
 }
-@media screen and (max-width: 767px) {
+/* @media screen and (max-width: 767px) {
     .displayArea{
         width:320px;
     }
-}
+} */
