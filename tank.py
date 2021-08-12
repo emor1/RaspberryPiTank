@@ -72,6 +72,9 @@ def Tank():
             print("right")
         else:
             tankStop()
+            print("-"*20)
+            print("STOP")
+            print("-"*20)
     return render_template('index.html')
 
 def sigint_handler(signal, frame):
