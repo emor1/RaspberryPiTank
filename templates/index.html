@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='js\JoyStick-master\JoyStick-master\joy.js') }}">
+    <script src="{{ url_for('static', filename='js\script.js') }}"></script>
+
     <!-- <link rel="stylesheet" href="..\static\css\style.css"> -->
 
     <title>Document</title>
@@ -15,7 +17,6 @@
         <img src="{{ url_for('video_feed') }}" width="640px" height="420px">
     </div>
     <div id="joyDiv" style="width:200px;height:200px;margin:50px"></div>
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     <iframe hidden name="hiddeniframe"></iframe>
 </body>
 </html>
