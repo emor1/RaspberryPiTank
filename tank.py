@@ -6,7 +6,7 @@ import time
 import cv2
 from camera import Camera
 
-
+prestates="stop"
 
 app=Flask(__name__)
 
@@ -58,6 +58,7 @@ def tankStop(value=255):
 @app.route("/on",methods=["POST"])
 def Tank():
     if request.method == "POST":
+
         if "forward"==request.form['name']:
             print("-"*20)
             tankForward()
@@ -79,6 +80,7 @@ def Tank():
             print("-"*20)
             print("STOP")
             print("-"*20)
+        prestates=request.form['name']
     return render_template('index.html')
 
 def sigint_handler(signal, frame):

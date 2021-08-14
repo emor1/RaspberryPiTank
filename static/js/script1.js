@@ -2,9 +2,9 @@ let joy = new JoyStick('joyDiv');
 
 setInterval(direction,50);
 // スクロールを無効にする
-$(window).on('touchmove.noScroll', function (e) {
-    e.preventDefault();
-});
+// $(window).on('touchmove.noScroll', function (e) {
+//     e.preventDefault();
+// });
 
 
 function direction(){
