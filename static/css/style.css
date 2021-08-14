@@ -1,11 +1,11 @@
-/* .displayArea{
+img{
     position: fixed;
     top: 0px;
 }
 #fixed{
     position: fixed;
     bottom: 0;
-} */
+}
 body{
     height: 540px;
     position: fixed;
