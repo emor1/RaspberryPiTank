@@ -1,6 +1,6 @@
 let joy = new JoyStick('joyDiv');
 
-setInterval(direction());
+setInterval(direction(),50);
 
 function direction(){
     let dir=joy.GetDir();
