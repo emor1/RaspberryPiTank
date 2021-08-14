@@ -1,6 +1,6 @@
-img{
+#displayArea{
     position: fixed;
-    top: 0px;
+    top: 0;
 }
 #fixed{
     position: fixed;
