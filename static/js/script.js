@@ -4,6 +4,7 @@ setInterval(direction,50);
 
 function direction(){
     let dir=joy.GetDir();
+    console.log(dir);
     if (dir.includes('N')){
         tankCmd("forward");
         console.log('f');
