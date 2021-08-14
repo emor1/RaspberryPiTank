@@ -1,11 +1,10 @@
+.displayArea{
+    position: fixed;
+    top: 0px;
+}
 #fixed{
     position: fixed;
     bottom: 0;
-}
-
-.displayArea{
-    position: fixed;
-    top: 0;
 }
 body{
     height: 540px;
