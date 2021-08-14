@@ -5,22 +5,22 @@ setInterval(direction,50);
 function direction(){
     let dir=joy.GetDir();
     console.log(dir);
-    if (dir.includes('N')){
+    if (dir.includes("N")){
         tankCmd("forward");
         console.log('f');
     }
-    else if(dir.includes('S')){
+    else if(dir.includes("S")){
         tankCmd("backward");
         console.log('b');
     }
-    else if(dir=='E'){
+    else if(dir=="E"){
         tankCmd("right");
     }
-    else if(dir=='W'){
+    else if(dir=="W"){
         tankCmd('left');
         console.log('le');
     }
-    else id(dir=='C'){
+    else if(dir=="C"){
         tankCmd('stop')
     }
 
