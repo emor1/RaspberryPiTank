@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='js\JoyStick-master\JoyStick-master\joy.js.css') }}">
     <!-- <link rel="stylesheet" href="..\static\css\style.css"> -->
 
     <title>Document</title>
@@ -13,16 +14,7 @@
     <div class="displayArea">
         <img src="{{ url_for('video_feed') }}" width="640px" height="420px">
     </div>
-    <!-- <div id="button">
-            <button id="fw" name="name" onmousedown="tankCmd('forward')" onmouseup="tankCmd('stop')">F</button>
-            <button id="lef" name="name" onmousedown="tankCmd('backward')" onmouseup="tankCmd('stop')">B</button>
-            <button id="rig" name="name" onmousedown="tankCmd('left')" onmouseup="tankCmd('stop')">L</button>
-            <button id="back" name="name"onmousedown="tankCmd('right')" onmouseup="tankCmd('stop')">R</button>
-    </div> -->
-    <div class="container">
-        <div class="view" hidden></div>
-        <img src="https://interactive-examples.mdn.mozilla.net/media/examples/gecko-320-213.jpg">
-    </div>
+    <div id="joyDiv" style="width:200px;height:200px;margin:50px"></div>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     <iframe hidden name="hiddeniframe"></iframe>
 </body>

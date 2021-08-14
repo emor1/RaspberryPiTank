@@ -1,28 +1,31 @@
-function showView(event) {
-    view.removeAttribute('hidden');
-    view.style.left = event.clientX - 50 + 'px';
-    view.style.top = event.clientY - 50 + 'px';
-    event.preventDefault();
-}
+let joy = new JoyStick('joyDiv');
 
-function moveView(event) {
-    view.style.left = event.clientX - 50 + 'px';
-    view.style.top = event.clientY - 50 + 'px';
-    if ((event.clientY - 50)>60){
+setInterval(direction());
+
+function direction(){
+    let dir=joy.GetDir();
+    if (dir.includes('N')){
         tankCmd("forward");
+        console.log('f');
     }
+    else if(dir.includes('S')){
+        tankCmd("backward");
+        console.log('b');
+    }
+    else if(dir=='E'){
+        tankCmd("right");
+    }
+    else if(dir='W'){
+        tankCmd('left');
+    }
+    else{
+        tankCmd('stop')
+    }
+    // else if(dir='NE'){
+    //     tankCmd('fleft');
+    // }
+    // else if(dir='')
 }
-
-function hideView(event) {
-    view.setAttribute('hidden', '');
-}
-
-const container = document.querySelector('.container');
-const view = document.querySelector('.view');
-
-container.onmousedown = showView;
-container.onmousemove = moveView;
-document.onmouseup = hideView;
 
 function tankCmd(way) {
     let form = document.createElement("form");
