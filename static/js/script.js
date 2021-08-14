@@ -23,7 +23,7 @@ function direction(){
     else if(dir=="C"){
         tankCmd('stop')
     }
-
+}
 function tankCmd(way) {
     console.log(way);
     let form = document.createElement("form");
@@ -43,4 +43,3 @@ function tankCmd(way) {
     form.appendChild(input);
     form.submit();
 }
-
