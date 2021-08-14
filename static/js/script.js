@@ -16,7 +16,7 @@ function direction(){
     else if(dir=='E'){
         tankCmd("right");
     }
-    else if(dir='W'){
+    else if(dir=='W'){
         tankCmd('left');
     }
     else{
