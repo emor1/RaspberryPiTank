@@ -2,6 +2,13 @@ let joy = new JoyStick('joyDiv');
 
 setInterval(direction,50);
 
+function disableScroll(event) {
+    event.preventDefault();
+}
+
+// イベントと関数を紐付け
+document.addEventListener('touchmove', disableScroll, { passive: false });
+
 function direction(){
     let dir=joy.GetDir();
     console.log(dir);
