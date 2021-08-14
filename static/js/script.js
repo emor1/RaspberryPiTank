@@ -29,6 +29,7 @@ function direction(){
 }
 
 function tankCmd(way) {
+    console.log(way);
     let form = document.createElement("form");
     form.setAttribute("action", "/on");
     form.setAttribute("method", "post");
