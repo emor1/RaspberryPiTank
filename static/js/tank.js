@@ -9,6 +9,8 @@ $(window).on('touchmove.noScroll', function (e) {
 
 // スクロール無効を解除する
 $(window).off('.noScroll');
+
+
 function direction(){
     let dir=joy.GetDir();
     console.log(dir);
