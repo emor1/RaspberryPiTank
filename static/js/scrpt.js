@@ -2,13 +2,13 @@ let joy = new JoyStick('joyDiv');
 
 setInterval(direction,50);
 
-function disableScroll(event) {
-    event.preventDefault();
-}
+// スクロールを無効にする
+$(window).on('touchmove.noScroll', function (e) {
+    e.preventDefault();
+});
 
-// イベントと関数を紐付け
-document.addEventListener('touchmove', disableScroll, { passive: false });
-
+// スクロール無効を解除する
+$(window).off('.noScroll');
 function direction(){
     let dir=joy.GetDir();
     console.log(dir);
