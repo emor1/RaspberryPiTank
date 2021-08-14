@@ -18,15 +18,11 @@ function direction(){
     }
     else if(dir=='W'){
         tankCmd('left');
+        console.log('le');
     }
-    else{
+    else id(dir=='C'){
         tankCmd('stop')
     }
-    // else if(dir='NE'){
-    //     tankCmd('fleft');
-    // }
-    // else if(dir='')
-}
 
 function tankCmd(way) {
     console.log(way);
