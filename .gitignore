@@ -5,3 +5,5 @@ test.*
 
 #folders
 test
+.vscode
+__pycache__
